@@ -116,29 +116,29 @@ class MainScreen(Screen):
 		),
 		(
 			"0 Kan inte göra det p.g.a. smärta.",
-			"-1",
-			"-2",
-			"-3",
-			"-4",
-			"-5",
-			"-6",
-			"-7",
-			"-8",
-			"-9",
-			"-10 Kan göra det utan smärtproblem."
+			"10-1",
+			"10-2",
+			"10-3",
+			"10-4",
+			"10-5",
+			"10-6",
+			"10-7",
+			"10-8",
+			"10-9",
+			"10-10 Kan göra det utan smärtproblem."
 		),
 		(
 			"0 Kan inte göra det p.g.a. smärta.",
-			"-1",
-			"-2",
-			"-3",
-			"-4",
-			"-5",
-			"-6",
-			"-7",
-			"-8",
-			"-9",
-			"-10 Kan göra det utan smärtproblem."
+			"10-1",
+			"10-2",
+			"10-3",
+			"10-4",
+			"10-5",
+			"10-6",
+			"10-7",
+			"10-8",
+			"10-9",
+			"10-10 Kan göra det utan smärtproblem."
 		),
 		(
 			"0 Helt lugn.",
@@ -181,16 +181,16 @@ class MainScreen(Screen):
 		),
 		(
 			"0 Ingen chans.",
-			"-1",
-			"-2",
-			"-3",
-			"-4",
-			"-5",
-			"-6",
-			"-7",
-			"-8",
-			"-9",
-			"-10 Mycket stor chans."
+			"10-1",
+			"10-2",
+			"10-3",
+			"10-4",
+			"10-5",
+			"10-6",
+			"10-7",
+			"10-8",
+			"10-9",
+			"10-10 Mycket stor chans."
 		),
 		(
 			"0 Instämmer inte alls.",
@@ -308,7 +308,7 @@ class MainScreen(Screen):
 	def	radiobox(self, i,j,*args):
 		listV = list(self.valuetuple)
 		if i == 2 or i == 3 or i == 7:
-			listV[i]=j*-1
+			listV[i]=10-(j)
 		else:			
 			listV[i]=j
 		listB = list(self.bttns)
@@ -371,16 +371,12 @@ class MainScreen(Screen):
 			summa=sum(self.valuetuple)
 			box = BoxLayout(orientation='vertical')
 			popup1 = Popup(title='', content=box, size_hint=(.75, .75))
-			if summa < 13:
-				themessage='MADRS-S-score visar symptom som kan tyda på: %s\nIngen eller mycket lätt depression.'%(summa)
-			if summa >= 13 and summa <= 19:
-				themessage='MADRS-S-score visar symptom som kan tyda på: %s\nLätt depression.'%(summa)
-			if summa >= 20 and summa <= 34:
-				themessage='MADRS-S-score visar symptom som kan tyda på: %s\nMåttlig depression.'%(summa)
-			if summa >= 35 :
-				themessage='MADRS-S-score visar symptom som kan tyda på: %s\nSvår depression.'%(summa)
+			freetext=TextInput(multiline=False,input_type='text',text="Plats för meddelande.")
+			box.add_widget(freetext)	
+			themessage='ÖMPSQ*-score: %s\n\n*Örebro Musculoskeletal Pain Screening Questionnaire\ntotala poäng varierar mellan 1-100.'%(summa)
 			box.add_widget(Label(text=themessage))	
 			store_btn = Button(text='OK')
+			themessage="%s\n%s"%(freetext,themessage)
 			store_btn.bind(on_press = lambda store_btn: self.send_mail(themessage, popup1))
 			box.add_widget(store_btn)
 			popup1.open()
