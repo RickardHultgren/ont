@@ -249,7 +249,7 @@ class MainScreen(Screen):
 			self.ids.megabox.clear_widgets()
 		except:
 			pass
-		for i in range(0,9):
+		for i in range(0,10):
 			if self.fontheight*(len(self.qlist[i])/self.linelen) > self.fontheight :
 				qheight=0*self.fontheight+self.fontheight*(len(self.qlist[i])/self.linelen)
 			else:
@@ -273,7 +273,7 @@ class MainScreen(Screen):
 				newq.text=str("%s"%self.qlist[i])
 				self.bigheight=self.bigheight+2*newq.height
 				bigbox.add_widget(newq)
-				for j in range(0,7):
+				for j in range(0,10):
 					if self.fontheight*(len(self.dscrptn[i][j])/self.linelen) > 3*self.fontheight :
 						bttnheight=2*self.fontheight+self.fontheight*(len(self.dscrptn[i][j])/self.linelen)
 					else:
@@ -307,7 +307,10 @@ class MainScreen(Screen):
 		
 	def	radiobox(self, i,j,*args):
 		listV = list(self.valuetuple)
-		listV[i]=j
+		if i == 2 or i == 3 or i == 7:
+			listV[i]=j*-1
+		else:			
+			listV[i]=j
 		listB = list(self.bttns)
 		listB[i]=1
 		#self.ids.eval("chckbx%set%s"%(str(i),str(j)))
