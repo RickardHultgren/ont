@@ -77,43 +77,56 @@ Builder.load_string('''
 class MainScreen(Screen):
 	nownr=0
 	qlist=(
-	"Här ber vi dig beskriva din sinnesstämning, om du känner dig ledsen, tungsint eller dyster till mods. Tänk efter hur du har känt dig de senaste tre dagarna, om du har skiftat i humöret eller om det har varit i stort sett detsamma hela tiden, och försök särskilt komma ihåg om du har känt dig lättare till sinnes om det har hänt något positivt.",
-	"Här ber vi dig markera i vilken utsträckning du haft känslor av inre spänning, olust och ångest eller odefinierad rädsla under de senaste tre dagarna. Tänk särskilt på hur intensiva känslorna varit, och om de kommit och gått eller funnits hela tiden.",
-	"Här ber vi Dig beskriva hur bra du sover. Tänk efter hur länge du sovit och hur god sömnen varit under de senaste tre nätterna. Bedömningen skall avse hur du faktiskt sovit, oavsett om du tagit sömnmedel eller ej. Om du sover mer än vanligt, sätt din markering vid 0.",
-	"Här ber vi dig ta ställning till hur din aptit är, och tänka efter om den på något sätt skilt sig från vad som är normalt för dig. Om du skulle ha bättre aptit än normalt, markera då det på 0.",
-	"Här ber vi dig ta ställning till din förmåga att hålla tankarna samlade och koncentrera dig på olika aktiviteter. Tänk igenom hur du fungerar vid olika sysslor som kräver olika grad av koncentrationsförmåga, t ex läsning av komplicerad text, lätt tidningstext och TV-tittande.",
-	"Här ber vid dig försöka värdera din handlingskraft. Frågan gäller om du har lätt eller svårt för att komma igång med sådant du tycker du bör göra, och i vilken utsträckning du måste över vinna ett inre motstånd när du skall ta itu med något.",
-	"Här ber vi dig ta ställning till hur du upplever ditt intresse för omvärlden och för andra människor, och för sådana aktiviteter som brukar bereda dig nöje och glädje.",
-	"Frågan gäller hur du ser på din egen framtid och hur du uppfattar ditt eget värde. Tänk efter i vilken utsträckning du ger dig självförebråelser, om du plågas av skuldkänslor, och om du oroat dig oftare än vanligt för t ex din ekonomi eller din hälsa.",
-	"Frågan gäller din livslust, och om du känt livsleda. Har du tankar på självmord, och i så fall, i vilken utsträckning upplever du detta som en verklig utväg?"
+	"Hur länge har Du lidit av Ditt nuvarande besvär?",
+	"Hur mycket smärta har Du haft den senaste veckan?",
+	"Jag kan utföra lättare arbete under en timme.",
+	"Jag kan sova på natten.",
+	"Hur spänd eller stressad har du känt Dig den senaste veckan?",
+	"I vilken utsträckning har du känt dig nedstämd den senaste veckan?",
+	"Som Du upplever det själv, hur stor är risken att ditt nuvarande besvär skulle bli långvarigt?",
+	"Hur stor chans tror DU att Du har att kunna arbeta om tre månader?",
+	"Om besvären ökar, är det en signal på att jag bör sluta med det jag håller på med, tills besvären minskar.",
+	"Jag bör inte utföra mina normala aktiviteter eller arbeten med den smärta jag har för närvarande."
 	)
 	dscrptn=(
 		(
-			"0 Jag kan känna mig glad eller ledsen, allt efter omständigheterna.",
-			"1",
-			"2 Jag känner mig nedstämd för det mesta, men ibland kan det kännas lättare.",
-			"3",
-			"4 Jag känner mig genomgående nedstämd och dyster. Jag kan inte glädja mig åt sådant som vanligen skulle göra mig glad.",
-			"5",
-			"6 Jag är totalt nedstämd och olycklig att jag inte kan tänka mig värre."
+			"0-1 veckor",
+			"1-2 veckor",
+			"3-4 veckor",
+			"4-5 veckor",
+			"6-8 veckor",
+			"9-11 veckor",
+			"3-6månader",
+			"6-9 månader",
+			"9-12 månader",
+			"Över ett år"
 		),
 		(
-			"0 Jag känner mig mestadels lugn.",
+			"0 Ingen smärta.",
 			"1",
-			"2 Ibland har jag obehagliga känslor av inre oro.",
+			"2",
 			"3",
-			"4 Jag har ofta en känsla av inre oro som ibland kan bli mycket stark, och som jag måste anstränga mig för att bemästra.",
+			"4",
 			"5",
-			"6 Jag har fruktansvärda, långvariga eller outhärdliga ångestkänslor.",
+			"6",
+			"7",
+			"8",
+			"9",
+			"10 Svårast tänkbara smärta"						
 		),
+		### negative loop
 		(
 			"0 Jag sover lugnt och bra och tillräckligt länge för mina behov. Jag har inga särskilda svårigheter att somna.",
 			"1",
-			"2 Jag har vissa sömnsvårigheter. Ibland har jag svårt att somna eller sover ytligare eller oroligare än vanligt.",
+			"2",
 			"3",
-			"4 Jag sover minst två timmar mindre per natt än normalt. Jag vaknar ofta under natten, även om jag inte blir störd.",
+			"4",
 			"5",
-			"6 Jag sover mycket dåligt, inte mer än 2-3 timmar per natt."
+			"6",
+			"7",
+			"8",
+			"9",
+			"10 "
 		),
 		(
 			"0 Min aptit är som den brukar vara.",
