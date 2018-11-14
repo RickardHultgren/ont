@@ -114,9 +114,34 @@ class MainScreen(Screen):
 			"9",
 			"10 Svårast tänkbara smärta"						
 		),
-		### negative loop
 		(
-			"0 Jag sover lugnt och bra och tillräckligt länge för mina behov. Jag har inga särskilda svårigheter att somna.",
+			"0 Kan inte göra det p.g.a. smärta.",
+			"-1",
+			"-2",
+			"-3",
+			"-4",
+			"-5",
+			"-6",
+			"-7",
+			"-8",
+			"-9",
+			"-10 Kan göra det utan smärtproblem."
+		),
+		(
+			"0 Kan inte göra det p.g.a. smärta.",
+			"-1",
+			"-2",
+			"-3",
+			"-4",
+			"-5",
+			"-6",
+			"-7",
+			"-8",
+			"-9",
+			"-10 Kan göra det utan smärtproblem."
+		),
+		(
+			"0 Helt lugn.",
 			"1",
 			"2",
 			"3",
@@ -126,65 +151,76 @@ class MainScreen(Screen):
 			"7",
 			"8",
 			"9",
-			"10 "
+			"10 Mycket spänd."
 		),
 		(
-			"0 Min aptit är som den brukar vara.",
+			"0 Inte alls.",
 			"1",
-			"2 Min aptit är sämre än vanligt.",
+			"2",
 			"3",
-			"4 Jag har påtagligt svårt att koncentrera mig på sådant som normalt inte kräver någon ansträngning från min sida (t ex läsning eller samtal med andra människor).",
+			"4",
 			"5",
-			"6 Jag kan överhuvudtaget inte koncentrera mig på någonting."
+			"6",
+			"7",
+			"8",
+			"9",
+			"10 Väldigt mycket."
 		),
 		(
-			"0 Jag har inga koncentrationssvårigheter.",
+			"0 Ingen risk.",
 			"1",
-			"2 Jag har tillfälligt svårt att hålla tankarna samlade på sådant som normalt skulle fånga min uppmärksamhet (t ex läsning eller TV-tittande).",
+			"2",
 			"3",
-			"4 Jag har påtagligt svårt att koncentrera mig på sådant som normalt inte kräver någon ansträngning från min sida (t ex läsning eller samtal med andra människor).",
+			"4",
 			"5",
-			"6 Jag kan överhuvudtaget inte koncentrera mig på någonting."
+			"6",
+			"7",
+			"8",
+			"9",
+			"10 Mycket stor risk."
 		),
 		(
-			"0 Jag har inga svårigheter med att ta itu med nya uppgifter.",
-			"1",
-			"2 När jag skall ta itu med något, tar det emot på ett sätt som inte är normalt för mig.",
-			"3",
-			"4 Det krävs en stor ansträngning för mig att ens komma igång med enkla uppgifter som jag vanligtvis utför mer eller mindre rutinmässigt.",
-			"5",
-			"6 Jag kan inte förmå mig att ta itu med de enklaste vardagssysslor."
+			"0 Ingen chans.",
+			"-1",
+			"-2",
+			"-3",
+			"-4",
+			"-5",
+			"-6",
+			"-7",
+			"-8",
+			"-9",
+			"-10 Mycket stor chans."
 		),
 		(
-			"0 Jag är intresserad av omvärlden och engagerar mig i den, och det bereder mig både nöje och glädje.",
+			"0 Instämmer inte alls.",
 			"1",
-			"2 Jag känner mindre starkt för sådant som brukar engagera mig. Jag har svårare än vanligt att bli glad eller svårare att bli arg när det är befogat.",
+			"2",
 			"3",
-			"4 Jag kan inte känna något intresse för omvärlden, inte ens för vänner och bekanta.",
+			"4",
 			"5",
-			"6 Jag har slutat uppleva några känslor. Jag känner mig smärtsamt likgiltig även för mina närmaste."
+			"6",
+			"7",
+			"8",
+			"9",
+			"10 Instämmer helt."
 		),
 		(
-			"0 Jag ser på framtiden med tillförsikt. Jag är på det hela taget ganska nöjd med mig själv.",
+			"0 Instämmer inte alls.",
 			"1",
-			"2 Ibland klandrar jag mig själv och tycker att jag är mindre värd än andra.",
+			"2",
 			"3",
-			"4 Jag grubblar ofta över mina misslyckanden och känner mig mindervärdig eller dålig, även om andra tycker annorlunda.",
+			"4",
 			"5",
-			"6 Jag ser allting i svart och kan inte se någon ljusning. Det känns som om jag var en alltigenom dålig människa, och som om jag aldrig skulle kunna få någon förlåtelse för det hemska jag gjort."
-		),
-		(
-			"0 Jag har normal aptit på livet.",
-			"1",
-			"2 Livet känns inte särskilt meningsfullt men jag önskar ändå inte att jag vore död.",
-			"3",
-			"4 Jag tycker ofta det vore bättre att vara död, och trots att jag egentligen inte önskar det, kan självmord ibland kännas som en möjlig utväg.",
-			"5",
-			"6 Jag är egentligen övertygad om att min enda utväg är att dö, och jag tänker mycket på hur jag bäst skall gå tillväga för att ta mitt eget liv."
-		)
+			"6",
+			"7",
+			"8",
+			"9",
+			"10 Instämmer helt."
+		)		
 	)
-	valuetuple=(0,0,0,0,0,0,0,0,0)
-	bttns=(0,0,0,0,0,0,0,0,0)
+	valuetuple=(0,0,0,0,0,0,0,0,0,0)
+	bttns=(0,0,0,0,0,0,0,0,0,0)
 	bigheight=NumericProperty()
 	fontheight=15
 	linelen=30
