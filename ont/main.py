@@ -1,4 +1,5 @@
-# coding:utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import kivy
 kivy.require('1.7.2') # replace with your current kivy version !
 from kivy.app import App
@@ -77,32 +78,32 @@ Builder.load_string('''
 class MainScreen(Screen):
 	nownr=0
 	qlist=(
-	"Hur länge har Du lidit av Ditt nuvarande besvär?",
-	"Hur mycket smärta har Du haft den senaste veckan?",
-	"Jag kan utföra lättare arbete under en timme.",
-	"Jag kan sova på natten.",
-	"Hur spänd eller stressad har du känt Dig den senaste veckan?",
-	"I vilken utsträckning har du känt dig nedstämd den senaste veckan?",
-	"Som Du upplever det själv, hur stor är risken att ditt nuvarande besvär skulle bli långvarigt?",
-	"Hur stor chans tror DU att Du har att kunna arbeta om tre månader?",
-	"Om besvären ökar, är det en signal på att jag bör sluta med det jag håller på med, tills besvären minskar.",
-	"Jag bör inte utföra mina normala aktiviteter eller arbeten med den smärta jag har för närvarande."
+	u"Hur l\u00E4nge har Du lidit av Ditt nuvarande besv\u00e4r?",
+	u"Hur mycket sm\u00E4rta har Du haft den senaste veckan?",
+	u"Jag kan utf\u00F6ra l\u00E4ttare arbete under en timme.",
+	u"Jag kan sova p\u00E5 natten.",
+	u"Hur sp\u00E4nd eller stressad har du k\u00E4nt Dig den senaste veckan?",
+	u"I vilken utstr\u00E4ckning har du k\u00E4nt dig nedst\u00E4md den senaste veckan?",
+	u"Som Du upplever det sj\u00E4lv, hur stor \u00E4r risken att ditt nuvarande besv\u00E4r skulle bli l\u00E5ngvarigt?",
+	u"Hur stor chans tror DU att Du har att kunna arbeta om tre m\u00E5nader?",
+	u"Om besv\u00E4ren \u00F6kar, \u00E4r det en signal p\u00E5 att jag b\u00f6r sluta med det jag h\u00E5ller p\u00E5 med, tills besv\u00E4ren minskar.",
+	u"Jag b\u00F6r inte utf\u00F6ra mina normala aktiviteter eller arbeten med den sm\u00E4rta jag har f\u00E5r n\u00E4rvarande."
 	)
 	dscrptn=(
 		(
-			"0-1 veckor",
-			"1-2 veckor",
-			"3-4 veckor",
-			"4-5 veckor",
-			"6-8 veckor",
-			"9-11 veckor",
-			"3-6månader",
-			"6-9 månader",
-			"9-12 månader",
-			"Över ett år"
+			u"0-1 veckor",
+			u"1-2 veckor",
+			u"3-4 veckor",
+			u"4-5 veckor",
+			u"6-8 veckor",
+			u"9-11 veckor",
+			u"3-6m\xe5nader",
+			u"6-9 m\xe5nader",
+			u"9-12 m\xe5nader",
+			u"\u00D6ver ett \xe5r"
 		),
 		(
-			"0 Ingen smärta.",
+			u"0 Ingen sm\u00E4rta.",
 			"1",
 			"2",
 			"3",
@@ -112,10 +113,10 @@ class MainScreen(Screen):
 			"7",
 			"8",
 			"9",
-			"10 Svårast tänkbara smärta"						
+			u"10 Sv\u00E6rast t\u00E4nkbara sm\u00E4rta"						
 		),
 		(
-			"0 Kan inte göra det p.g.a. smärta.",
+			u"10-0 Kan inte g\u00f6ra det p.g.a. sm\u00E4rta.",
 			"10-1",
 			"10-2",
 			"10-3",
@@ -125,10 +126,10 @@ class MainScreen(Screen):
 			"10-7",
 			"10-8",
 			"10-9",
-			"10-10 Kan göra det utan smärtproblem."
+			u"10-10 Kan g\u00f6ra det utan sm\u00E4rtproblem."
 		),
 		(
-			"0 Kan inte göra det p.g.a. smärta.",
+			u"10-0 Kan inte g\u00f6ra det p.g.a. sm\u0084rta.",
 			"10-1",
 			"10-2",
 			"10-3",
@@ -138,10 +139,10 @@ class MainScreen(Screen):
 			"10-7",
 			"10-8",
 			"10-9",
-			"10-10 Kan göra det utan smärtproblem."
+			u"10-10 Kan g\u00f6ra det utan sm\u00E4rtproblem."
 		),
 		(
-			"0 Helt lugn.",
+			u"0 Helt lugn.",
 			"1",
 			"2",
 			"3",
@@ -151,10 +152,10 @@ class MainScreen(Screen):
 			"7",
 			"8",
 			"9",
-			"10 Mycket spänd."
+			u"10 Mycket sp\u00E4nd."
 		),
 		(
-			"0 Inte alls.",
+			u"0 Inte alls.",
 			"1",
 			"2",
 			"3",
@@ -164,10 +165,10 @@ class MainScreen(Screen):
 			"7",
 			"8",
 			"9",
-			"10 Väldigt mycket."
+			u"10 V\u00E4ldigt mycket."
 		),
 		(
-			"0 Ingen risk.",
+			u"0 Ingen risk.",
 			"1",
 			"2",
 			"3",
@@ -177,10 +178,10 @@ class MainScreen(Screen):
 			"7",
 			"8",
 			"9",
-			"10 Mycket stor risk."
+			u"10 Mycket stor risk."
 		),
 		(
-			"0 Ingen chans.",
+			u"10-0 Ingen chans.",
 			"10-1",
 			"10-2",
 			"10-3",
@@ -190,10 +191,10 @@ class MainScreen(Screen):
 			"10-7",
 			"10-8",
 			"10-9",
-			"10-10 Mycket stor chans."
+			u"10-10 Mycket stor chans."
 		),
 		(
-			"0 Instämmer inte alls.",
+			u"0 Inst\u00E4mmer inte alls.",
 			"1",
 			"2",
 			"3",
@@ -203,10 +204,10 @@ class MainScreen(Screen):
 			"7",
 			"8",
 			"9",
-			"10 Instämmer helt."
+			u"10 Inst\u00E4mmer helt."
 		),
 		(
-			"0 Instämmer inte alls.",
+			u"0 Inst\u00E4mmer inte alls.",
 			"1",
 			"2",
 			"3",
@@ -216,7 +217,7 @@ class MainScreen(Screen):
 			"7",
 			"8",
 			"9",
-			"10 Instämmer helt."
+			u"10 Inst\u00E4mmer helt."
 		)		
 	)
 	valuetuple=(0,0,0,0,0,0,0,0,0,0)
@@ -270,7 +271,7 @@ class MainScreen(Screen):
 			newbox.text=txt
 			if i==self.nownr:
 				newbox.background_color= (.25, .75, 1.0, 1.0)
-				newq.text=str("%s"%self.qlist[i])
+				newq.text=(u"%s"%self.qlist[i])
 				self.bigheight=self.bigheight+2*newq.height
 				bigbox.add_widget(newq)
 				for j in range(0,10):
@@ -362,7 +363,7 @@ class MainScreen(Screen):
 		if filled==0 :
 			box = BoxLayout(orientation='vertical')
 			popup1 = Popup(title='', content=box, size_hint=(.75, .75))
-			box.add_widget(Label(text='Var god och svara på alla frågor.'))
+			box.add_widget(Label(text='Var god och svara p\x85 alla fr\x85gor.'))
 			store_btn = Button(text='OK')
 			store_btn.bind(on_press = lambda *args: popup1.dismiss())
 			box.add_widget(store_btn)
@@ -371,9 +372,9 @@ class MainScreen(Screen):
 			summa=sum(self.valuetuple)
 			box = BoxLayout(orientation='vertical')
 			popup1 = Popup(title='', content=box, size_hint=(.75, .75))
-			freetext=TextInput(multiline=False,input_type='text',text="Plats för meddelande.")
+			freetext=TextInput(multiline=False,input_type='text',text="Plats f\x83r meddelande.")
 			box.add_widget(freetext)	
-			themessage='ÖMPSQ*-score: %s\n\n*Örebro Musculoskeletal Pain Screening Questionnaire\ntotala poäng varierar mellan 1-100.'%(summa)
+			themessage='ÃMPSQ*-score: %s\n\n*Ãrebro Musculoskeletal Pain Screening Questionnaire\ntotala po\x85ng varierar mellan 1-100.'%(summa)
 			box.add_widget(Label(text=themessage))	
 			store_btn = Button(text='OK')
 			themessage="%s\n%s"%(freetext,themessage)
