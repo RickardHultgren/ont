@@ -374,9 +374,9 @@ class MainScreen(Screen):
 			box = BoxLayout(orientation='vertical')
 			popup1 = Popup(title='', content=box, size_hint=(.75, .75))
 			#freetext=TextInput(multiline=False,input_type='text',text="Plats f\x83r meddelande.")
-			freetext=TextInput(multiline=False,input_type='text',text="Plats f\x83r meddelande.")
+			freetext=TextInput(multiline=False,input_type='text',text=u"Plats f\x83r meddelande.")
 			box.add_widget(freetext)	
-			themessage='ÖMPSQ*-score: %s\n\n*Örebro Musculoskeletal Pain Screening Questionnaire\ntotala po\x85ng varierar mellan 1-100.'%(summa)
+			themessage=u'\u00D6MPSQ*-score: %s\n\n*\u00D6rebro Musculoskeletal Pain Screening Questionnaire\ntotala po\x85ng varierar mellan 1-100.'%(summa)
 			box.add_widget(Label(text=themessage))	
 			store_btn = Button(text='OK')
 			themessage="%s\n%s"%(freetext,themessage)
@@ -455,3 +455,4 @@ class ontApp(App):
 
 if __name__ == '__main__':
 	ontApp().run()
+
