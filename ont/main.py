@@ -34,6 +34,7 @@ settingdata = JsonStore('settingdata.json')
 
 Builder.load_string('''
 <MainScreen>:
+    allow_screensaver: 0
     name: 'mainscreen'
     canvas.before:
         Color:
@@ -413,8 +414,7 @@ class MainScreen(Screen):
 		popup2.open()
 
 
-
-class emadrsApp(App):
+class ontApp(App):
 	def build(self):
 			the_screenmanager = ScreenManager()
 			#the_screenmanager.transition = FadeTransition()
@@ -427,21 +427,30 @@ class emadrsApp(App):
 			return True
 
 	def on_resume(self):
-			the_screenmanager = ScreenManager()
-			#the_screenmanager.transition = FadeTransition()
-			mainscreen = MainScreen(name='mainscreen')
-			the_screenmanager.add_widget(mainscreen)
-			return the_screenmanager
+			#the_screenmanager = ScreenManager()
+			#mainscreen = MainScreen(name='mainscreen')
+			#the_screenmanager.add_widget(mainscreen)
+			#return the_screenmanager
+			
+			#return True
+			
+			pass
 		
-	def on_start(self):
-			the_screenmanager = ScreenManager()
-			#the_screenmanager.transition = FadeTransition()
-			mainscreen = MainScreen(name='mainscreen')
-			the_screenmanager.add_widget(mainscreen)
-			return the_screenmanager
+	#def on_start(self):
+			#the_screenmanager = ScreenManager()
+			#mainscreen = MainScreen(name='mainscreen')
+			#the_screenmanager.add_widget(mainscreen)
+			#return the_screenmanager
+			
+			#return True
+			
+			#pass
+
+			
 
 	def on_stop(self):
 		pass
 
+
 if __name__ == '__main__':
-	emadrsApp().run()
+	ontApp().run()
