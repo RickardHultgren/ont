@@ -70,6 +70,7 @@ android.permissions = SEND_SMS
 
 # (int) Minimum API required
 #android.minapi = 9
+android.minapi = 15
 
 # (int) Android SDK version to use
 #android.sdk = 20
@@ -132,7 +133,7 @@ android.permissions = SEND_SMS
 
 # (bool) Indicate whether the screen should stay on
 # Don't forget to add the WAKE_LOCK permission if you set this to True
-#android.wakelock = False
+android.wakelock = True
 
 # (list) Android application meta-data to set (key=value format)
 #android.meta_data =
