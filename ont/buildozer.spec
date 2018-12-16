@@ -46,6 +46,7 @@ requirements = plyer,kivy
 
 # (str) Presplash of the application
 #presplash.filename = %(source.dir)s/data/presplash.png
+presplash.filename = ont.png
 
 # (str) Icon of the application
 icon.filename = logo.png
