@@ -54,7 +54,7 @@ Builder.load_string('''
             ActionView:
                 use_separator: True
                 ActionPrevious:
-                    app_icon: 'emadrs.png'
+                    app_icon: 'ont.png'
                     title: ''
                     with_previous: False
                 ActionGroup:
@@ -271,7 +271,7 @@ class MainScreen(Screen):
 				newbox.color=(0,0,0,1)
 			newbox.text=txt
 			if i==self.nownr:
-				newbox.background_color= (.25, .75, 1.0, 1.0)
+				newbox.background_color= (1, .5, 0, 1.0)
 				newq.text=(u"%s"%self.qlist[i])
 				self.bigheight=self.bigheight+2*newq.height
 				bigbox.add_widget(newq)
@@ -287,7 +287,7 @@ class MainScreen(Screen):
 					smallLabel.bind(height=smallLabel.setter('self.minimum_height'))
 					smallLabel.bind(on_press=partial(self.radiobox, i, j))
 					if self.valuetuple[i] == j and self.bttns[i]==1:
-						smallLabel.background_color = (.25, .75, 1.0, 1.0)
+						smallLabel.background_color = (1, .5, 0, 1.0)
 					else:
 						smallLabel.background_color = (1.0, 1.0, 1.0, 1.0)
 					bigbox.add_widget(smallLabel)
@@ -375,7 +375,7 @@ class MainScreen(Screen):
 			popup1 = Popup(title='', content=box, size_hint=(.75, .75))
 			freetext=TextInput(multiline=False,input_type='text',text="Plats f\x83r meddelande.")
 			box.add_widget(freetext)	
-			themessage='ÃMPSQ*-score: %s\n\n*Ãrebro Musculoskeletal Pain Screening Questionnaire\ntotala po\x85ng varierar mellan 1-100.'%(summa)
+			themessage=u'\u00D6MPSQ*-score: %s\n\n*\u00D6rebro Musculoskeletal Pain Screening Questionnaire\ntotala po\x85ng varierar mellan 1-100.'%(summa)
 			box.add_widget(Label(text=themessage))	
 			store_btn = Button(text='OK')
 			themessage="%s\n%s"%(freetext,themessage)
